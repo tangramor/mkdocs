@@ -6,7 +6,7 @@
     white-space: pre;
     color: grey;
     @top-left {
-        content: '© 2018 Longtugame';
+        content: '© 2018 Tangramor';
     }
     @top-center {
         content: string(chapter);
