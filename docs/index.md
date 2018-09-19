@@ -133,7 +133,7 @@ plugins:
 
 ## 发布到 Gitlab Pages
 
-首先呢，你得有一个 Gitlab 帐号，在 [Gitlab 站点](http://gitlab.longtubas.com)上创建一个文档项目，然后把前面的内容提交到这个项目。
+首先呢，你得有一个 Gitlab 帐号，在 [Gitlab 站点](http://gitlab.com)上创建一个文档项目，然后把前面的内容提交到这个项目。
 
 光这样的话 Gitlab 是不会自动为我们完成 Pages 的页面创建的，我们需要再在项目根目录创建一个 `.gitlab-ci.yml` 文件：
 
@@ -166,11 +166,10 @@ pages:
 
 ![gitlab pages url](./images/gitlab_pages_settings.png)
 
-这个 URL 在公司内部都可以访问。把你的文档 URL 赶紧广而告之吧！
 
 
 ## 快速开始 Quick Start
 
-直接下载[本项目文件]()，稍作修改，提交到你的文档项目，就可以啦。
+直接下载[本项目文件](https://github.com/tangramor/mkdocs/archive/master.zip)，稍作修改，提交到你的文档项目，就可以啦。
 
 
