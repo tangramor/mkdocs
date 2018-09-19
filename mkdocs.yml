@@ -3,6 +3,10 @@ markdown_extensions:
   - toc:
       permalink: True
       separator: "_"
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
 site_name: 文档撰写指南
 theme: material
 extra_css:

@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         shared-mime-info ttf-wqy-microhei ttf-wqy-zenhei socat \
         && pip install WeasyPrint \
         && pip install mkdocs mkdocs-pdf-export-plugin mkdocs-material \
+        && pip install pygments pymdown-extensions \
         && mkdir /data && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data

@@ -117,6 +117,10 @@ markdown_extensions:
   - toc:
       permalink: True
       separator: "_"
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
 site_name: my-project
 theme: material
 extra_css:
@@ -125,6 +129,8 @@ plugins:
   - search
   - pdf-export
 ```
+
+`material` 主题支持很多 mkdocs 扩展，文档有[详细说明](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)。
 
 再次访问 http://127.0.0.1:8000 ，应该能看到 PDF 的下载链接了：
 
