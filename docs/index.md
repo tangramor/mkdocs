@@ -89,12 +89,12 @@ pip install mkdocs-material mkdocs-pdf-export-plugin
 
 为了支持中文，我们添加一个额外的 css 样式表文件 `extra.css` 到 `docs/stylesheets/`：
 
-``` css
+``` CSS
 @page {
     size: a4 portrait;
     margin: 25mm 10mm 25mm 10mm;
     counter-increment: page;
-    font-family: "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei Mono", "Material Icons", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     white-space: pre;
     color: grey;
     @top-left {
@@ -111,7 +111,7 @@ pip install mkdocs-material mkdocs-pdf-export-plugin
 
 再修改 `mkdocs.yml`，添加 `theme` 为 `material`，添加上面的 `extra.css`，添加 `pdf-export` 插件：
 
-``` yaml
+``` YAML
 markdown_extensions:
   - smarty
   - toc:
@@ -143,11 +143,10 @@ plugins:
 
 光这样的话 Gitlab 是不会自动为我们完成 Pages 的页面创建的，我们需要再在项目根目录创建一个 `.gitlab-ci.yml` 文件：
 
-``` yaml
+``` YAML
 image: tangramor/mkdocs
 
 before_script:
-  ## - pip install mkdocs
   ## Add your custom theme if not inside a theme_dir
   ## (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
   ## - pip install mkdocs-material

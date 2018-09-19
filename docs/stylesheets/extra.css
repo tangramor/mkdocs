@@ -18,7 +18,7 @@
     size: a4 portrait;
     margin: 25mm 10mm 25mm 10mm;
     counter-increment: page;
-    font-family: "Material Icons", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei Mono", "WenQuanYi Micro Hei", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei Mono", "Material Icons", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     white-space: pre;
     color: grey;
     @top-left {
