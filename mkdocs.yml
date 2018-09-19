@@ -1,0 +1,12 @@
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: True
+      separator: "_"
+site_name: 文档撰写指南
+theme: material
+extra_css:
+  - 'stylesheets/extra.css'
+plugins:
+  - search
+  - pdf-export
