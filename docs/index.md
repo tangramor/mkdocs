@@ -10,7 +10,7 @@
 
 首先，你需要安装 [python](https://www.python.org/)
 
-!!! note 关于版本
+!!! note "关于 Python 版本"
     版本在2.7以上即可，推荐安装高版本的（后面引入的PDF导出功能只支持 python 3.4 以上）。同时安装 python 的包管理工具 pip。
 
 ```
@@ -83,13 +83,13 @@ pip install WeasyPrint
 
 然后安装 pdf-export 插件和它目前唯一支持的 mkdocs 主题 material：
 
-```
+``` shell
 pip install mkdocs-material mkdocs-pdf-export-plugin
 ```
 
 为了支持中文，我们添加一个额外的 css 样式表文件 `extra.css` 到 `docs/stylesheets/`：
 
-```
+``` css
 @page {
     size: a4 portrait;
     margin: 25mm 10mm 25mm 10mm;
@@ -98,7 +98,7 @@ pip install mkdocs-material mkdocs-pdf-export-plugin
     white-space: pre;
     color: grey;
     @top-left {
-        content: '© 2018 Longtugame';
+        content: '© 2018 Tangramor';
     }
     @top-center {
         content: string(chapter);
@@ -111,7 +111,7 @@ pip install mkdocs-material mkdocs-pdf-export-plugin
 
 再修改 `mkdocs.yml`，添加 `theme` 为 `material`，添加上面的 `extra.css`，添加 `pdf-export` 插件：
 
-```
+``` yaml
 markdown_extensions:
   - smarty
   - toc:
@@ -143,7 +143,7 @@ plugins:
 
 光这样的话 Gitlab 是不会自动为我们完成 Pages 的页面创建的，我们需要再在项目根目录创建一个 `.gitlab-ci.yml` 文件：
 
-```
+``` yaml
 image: tangramor/mkdocs
 
 before_script:

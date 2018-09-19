@@ -8,6 +8,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         && pip install WeasyPrint \
         && pip install mkdocs mkdocs-pdf-export-plugin mkdocs-material \
         && pip install pygments pymdown-extensions \
+        && mkdir ~/.fonts && cd ~/.fonts/ \
+        && wget https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.ttf \
+        && wget https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff \
+        && wget https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.eot \
         && mkdir /data && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data
