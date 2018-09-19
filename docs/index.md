@@ -138,7 +138,7 @@ plugins:
 光这样的话 Gitlab 是不会自动为我们完成 Pages 的页面创建的，我们需要再在项目根目录创建一个 `.gitlab-ci.yml` 文件：
 
 ```
-image: mkdocs
+image: tangramor/mkdocs
 
 before_script:
   ## - pip install mkdocs

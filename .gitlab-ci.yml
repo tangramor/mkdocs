@@ -1,4 +1,4 @@
-image: mkdocs
+image: tangramor/mkdocs
 
 before_script:
   #- pip install mkdocs
