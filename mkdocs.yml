@@ -32,5 +32,5 @@ extra_javascript:
 plugins:
   - search
   - pdf-export:
-      verbose: true
+      verbose: false
       media_type: print
