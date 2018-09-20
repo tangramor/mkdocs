@@ -163,7 +163,15 @@ TeX数学公式在页面也是能够渲染的：$p(x|y) = \frac{p(y|x)p(x)}{p(y)
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
 \end{align}
 
-可惜的是目前 PDF 导出[还不能支持公式](https://github.com/Kozea/WeasyPrint/issues/59)，如果一定要在导出的PDF加入公式，建议[把公式转换成图片](http://latex.codecogs.com/eqneditor/editor.php)嵌入进文档。
+可惜的是目前 PDF 导出[还不能支持公式](https://github.com/Kozea/WeasyPrint/issues/59)，如果一定要在导出的PDF加入公式，建议[把公式转换成图片](http://latex.codecogs.com/eqneditor/editor.php)嵌入进文档，例如：
+
+<img style="display: block; margin: auto;" alt="formula" src="./images/CodeCogsEqn.svg">
+
+注意上面直接在 Markdown 文件里使用了 HTML + CSS 来使图片居中：
+
+``` HTML
+<img style="display: block; margin: auto;" alt="formula" src="./images/CodeCogsEqn.svg">
+```
 
 
 ## 发布到 Gitlab Pages
