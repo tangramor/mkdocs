@@ -24,6 +24,8 @@ mkdocs serve &
 socat -d tcp-listen:80,reuseaddr,fork tcp:127.0.0.1:8000 &
 ```
 
+通过第二条命令的 [socat](http://www.dest-unreach.org/socat/) 转发，mkdocs 对 127.0.0.1:8000 的监听会被转发到 80 端口。
+
 然后用浏览器访问 http://192.168.99.100 即可（Windows下Docker缺省IP一般是这个，如果是Mac或Linux，直接访问 http://127.0.0.1 ）
 
 
