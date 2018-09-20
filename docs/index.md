@@ -175,6 +175,29 @@ pages:
 
 ## 快速开始 Quick Start
 
-直接下载[本项目文件](https://github.com/tangramor/mkdocs/archive/master.zip)，稍作修改，提交到你的文档项目，就可以啦。
+直接下载[本项目文件](https://github.com/tangramor/mkdocs/archive/master.zip)，稍作修改，提交到你的 Gitlab 文档项目，就可以啦。
+
+
+### 或者：
+
+如果你安装了 docker，那么运行下面的命令即可以当前目录为工作路径来运行容器：
+
+```
+docker run --name mkdocs -d -it -p 80:80 -v ${PWD}:/data tangramor/mkdocs
+```
+
+
+然后就可以通过 `docker exec -it mkdocs bash` 进入此容器来运行 mkdocs 命令了。
+
+进入容器后，在 /data 目录下可以创建文档项目，然后进入文档项目，运行如下命令：
+
+```
+mkdocs serve &
+socat -d tcp-listen:80,reuseaddr,fork tcp:127.0.0.1:8000 &
+```
+
+然后用浏览器访问 http://192.168.99.100 即可（Windows下Docker缺省IP一般是这个，如果是Mac或Linux，直接访问 http://127.0.0.1 ）
+
+
 
 
