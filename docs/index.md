@@ -109,7 +109,7 @@ pip install mkdocs-material mkdocs-pdf-export-plugin
 }
 ```
 
-再修改 `mkdocs.yml`，添加 `theme` 为 `material`，添加上面的 `extra.css`，添加 `pdf-export` 插件：
+再修改 `mkdocs.yml`，添加 `theme` 为 `material`，添加上面的 `extra.css`，添加 `pdf-export` 等等插件：
 
 ``` YAML
 markdown_extensions:
@@ -121,13 +121,33 @@ markdown_extensions:
   - codehilite
   - footnotes
   - meta
-site_name: my-project
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+site_name: 文档撰写指南
 theme: material
 extra_css:
   - 'stylesheets/extra.css'
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 plugins:
   - search
-  - pdf-export
+  - pdf-export:
+      verbose: false
+      media_type: print
 ```
 
 `material` 主题支持很多 mkdocs 扩展，文档有[详细说明](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)。
@@ -135,6 +155,15 @@ plugins:
 再次访问 http://127.0.0.1:8000 ，应该能看到 PDF 的下载链接了：
 
 ![local site](./images/localhost.png)
+
+
+TeX数学公式在页面也是能够渲染的：$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
+
+\begin{align}
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+\end{align}
+
+可惜的是目前 PDF 导出[还不能支持公式](https://github.com/Kozea/WeasyPrint/issues/59)，如果一定要在导出的PDF加入公式，建议[把公式转换成图片](http://latex.codecogs.com/eqneditor/editor.php)嵌入进文档。
 
 
 ## 发布到 Gitlab Pages
